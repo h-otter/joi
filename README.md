@@ -1,5 +1,5 @@
 # kyoupro
-Training myself for competitive programing. I want this experience to be my skills.
+Training myself for competitive programing.
 
 ## JOI
 
