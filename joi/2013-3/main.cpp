@@ -3,14 +3,11 @@
 
 int main(){
   int w, h, n;
-  std::cin >> w;
-  std::cin >> h;
-  std::cin >> n;
+  std::cin >> w >> h >> n;
 
   int point[n][2];
   for (int i = 0; i < n; i++){
-    std::cin >> point[i][0];
-    std::cin >> point[i][1];
+    std::cin >> point[i][0] >> point[i][1];
   }
 
   int length = 0;
