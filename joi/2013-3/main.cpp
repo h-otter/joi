@@ -2,10 +2,10 @@
 #include <algorithm>
 
 int main(){
-  int w, n, h;
+  int w, h, n;
   std::cin >> w;
-  std::cin >> n;
   std::cin >> h;
+  std::cin >> n;
 
   int point[n][2];
   for (int i = 0; i < n; i++){
@@ -13,7 +13,7 @@ int main(){
     std::cin >> point[i][1];
   }
 
-  int length = std::max(point[0][0], point[0][1]);
+  int length = 0;
   for (int i = 1; i < n; i++){
     if ((point[i][0] - point[i-1][0]) * (point[i][1] - point[i-1][1]) > 0){
       length += std::max(abs(point[i][0] - point[i-1][0]), abs(point[i][1] - point[i-1][1]));
@@ -21,8 +21,8 @@ int main(){
     else{
       length += abs(point[i][0] - point[i-1][0]) + abs(point[i][1] - point[i-1][1]);
     }
+//    std::cout << "DEBUG i = " << i << ", length = " << length << std::endl;
   }
-  length += std::max(abs(point[n-1][0] - w), abs(point[n-1][1] - h));
 
   std::cout << length << std::endl;
 
